@@ -42,6 +42,6 @@ export class YouTubeSearchComponent {
   updateResults(results: SearchResult[]): void {
     console.log("this is results in youtube search",results)
     this.results = results;
-    // console.log("results:", this.results); // uncomment to take a look
+    // console.log("results:", this.results);
   }
 }

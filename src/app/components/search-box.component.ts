@@ -12,7 +12,6 @@ import {YouTubeService} from "../youTube.service";
         <form class="form-group">
           <input type="text" class="form-control" placeholder="Search YouTube ...">
         </form>
-      
       </div>   
 
 `,
