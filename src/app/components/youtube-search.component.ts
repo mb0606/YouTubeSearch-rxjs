@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 import { SearchResult } from '../search-result'
 
-let loadingGif: string = ((<any>window).__karma__) ? '' : require('../images/loading.gif');
 
 
 @Component({
@@ -10,11 +9,7 @@ let loadingGif: string = ((<any>window).__karma__) ? '' : require('../images/loa
   template: `
   <div class='container'>
       <div class="page-header">
-        <h1>YouTube Search
-          <h4
-            *ngIf="loading"
-            >Loading ...</h4>
-        </h1>
+       <h1>YouTube Search</h1>
       </div>
 
       <div class="row">
@@ -27,6 +22,12 @@ let loadingGif: string = ((<any>window).__karma__) ? '' : require('../images/loa
       </div>
 
       <div class="row">
+
+          <img
+             style="margin: 0px 45% ;height: 100px;"
+             *ngIf="loading"
+             src='./assets/images/loading.gif' />
+
         <search-result
           *ngFor="let result of results"
           [result]="result">

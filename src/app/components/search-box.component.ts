@@ -9,7 +9,7 @@ import {YouTubeService} from "../youTube.service";
   templateUrl: `
 
       <div class="panel panel-default">
-        <form>
+        <form class="form-group">
           <input type="text" class="form-control" placeholder="Search YouTube ...">
         </form>
       
@@ -19,11 +19,14 @@ import {YouTubeService} from "../youTube.service";
 
 })
 export class SearchBoxComponent implements OnInit {
+  // Set up emit to parent if the Loading icon should be shown
   @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // Used to pass the results to the parent
   @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
 
   constructor(private youtube: YouTubeService,
               private el: ElementRef) {
+    console.log(this.el)
   }
 
   ngOnInit(): void {
