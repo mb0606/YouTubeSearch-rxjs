@@ -7,13 +7,13 @@ import { SearchResult } from '../search-result'
 @Component({
   selector: 'youtube-search',
   template: `
-  <div class='container'>
+  <div class='row'>
       <div class="page-header">
        <h1>YouTube Search</h1>
       </div>
 
       <div class="row">
-        <div class="input-group input-group-lg col-md-12">
+        <div class="col-md-12">
           <search-box
              (loading)="loading = $event"
              (results)="updateResults($event)"
